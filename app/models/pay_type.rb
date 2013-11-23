@@ -2,7 +2,7 @@ class PayType < ActiveRecord::Base
   
   def self.get_pay_types
     if PayType.table_exists?
-       pts = PayType.find(:all)
+       pts = PayType.all
        payment_types = []
        pts.each do |pt|
          payment_types << [pt.name,pt.id]
